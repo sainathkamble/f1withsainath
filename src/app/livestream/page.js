@@ -1,13 +1,13 @@
-import "../global.css"
-// import Navbar from "./navbar/page";
-// import Footer from "./footer/page";
+import "../global.css";
+import Navbar from "../navbar/page";
+import Footer from "../footer/page";
 
 export default function Home() {
     return (
       <>
-      {/* <Navbar/> */}
-       This is a streaming page
-      {/* <Footer/> */}
+      <Navbar/>
+       <p className="h-[80vh]">This is a streaming page</p>
+      <Footer/>
       </>
     );
   }

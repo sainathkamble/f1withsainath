@@ -1,7 +1,7 @@
-import "./global.css"
+import "./global.css";
 import Navbar from "./navbar/page";
 import Footer from "./footer/page";
-import Hero from "./hero/page";
+import Hero from "./home/page";
 
 
 export default function Home() {
@@ -13,4 +13,4 @@ export default function Home() {
       <Footer/>
     </div>
   );
-  }
+}
