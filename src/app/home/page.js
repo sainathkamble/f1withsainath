@@ -80,7 +80,7 @@ export default function Hero(){
                 <p className="flex justify-center">7 April</p>
                 <p>Race :- 10:30AM</p>
               </div>
-             <Link href="./livestream" className=" my-3 py-2 px-3 bg-red-600 rounded-xl text-xl font-semibold">{currentRace} Grand Prix</Link>
+             <Link href="./livestream" className=" my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentRace} Grand Prix</Link>
           </div>
           </div>
 
