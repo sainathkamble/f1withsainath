@@ -7,8 +7,8 @@ export default function Calender(){
     return(
         <>
         <Navbar/>
-        <div className="h-[80vh] w-screen px-4 grid place-items-center bg-cover bg-slate-950">
-         <Image src="/calendar.webp" width={400} height={900} alt="F1 2024 Calendar image"/>
+        <div className="h-[80vh] w-screen px-4 grid place-items-center bg-cover text-slate-50 bg-slate-950">
+         <Image src="/calendar.jpg" width={400} height={900} alt="F1 2024 Calendar image"/>
         </div>
         <Footer/>
         </>
