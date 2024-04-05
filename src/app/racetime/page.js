@@ -17,7 +17,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">UTC(Coordinate Universal Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -28,7 +28,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">CET(Central European Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -39,7 +39,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">ET(Eastern Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -50,7 +50,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">PT(Pacific Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -61,7 +61,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">AEDT(Australian Eastern Daylight Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -72,7 +72,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">JST(Japan Standard Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
@@ -83,7 +83,7 @@ export default function Time(){
            <p className="text-slate-50 text-lg font-medium flex justify-center py-2">IST(Indian Standard Time)</p>
              <ul className="grid grid-cols-1 grid-rows-5 gap-1">
                {[
-                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+                ['Free Practice 1','0'],['Free Practice 2','0'],['Free Practice 3','0'],['Qualifying','0'],['Race','0'],
                ].map(([session,time])=>(
                  <li className="text-slate-50 py-1">{session} : {time}</li>
                ))}
