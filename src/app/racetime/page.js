@@ -3,25 +3,94 @@ import Navbar from "../navbar/page";
 import Footer from "../footer/page";
 
 export default function Time(){
-    let utcTime = 10;
-    let cetTime=0; let etTime=0; let ptTime=0; let aedtTime=0; let jstTime=0; let istTime=0;
-    if(utcTime<=24){
-     return   cetTime=utcTime+5;
-    }
+     
   return(
     <>
     <Navbar/>
-    <section className="h-[80vh] w-screen px-4 py-4 grid place-items-center bg-slate-950 overflow-y-hidden">
-           <p className="text-xl text-slate-50">Check race time in your time zone</p>
-           <ul className="grid grid-cols-2 grid-rows-7 my-2 text-slate-50">
-               <li>UTC</li><p>{utcTime}</p>
-               <li>CET</li><p>{cetTime}</p>
-               <li>ET</li><p>{etTime}</p>
-               <li>PT</li><p>{ptTime}</p>
-               <li>AEDT</li><p>{aedtTime}</p>
-               <li>JST</li><p>{jstTime}</p>
-               <li>IST</li><p>{istTime}</p>
-           </ul>
+    <section className="h-[80vh] w-screen bg-slate-950">
+
+          <p className="h-auto w-screen text-xl text-slate-50 flex justify-center py-4">Check race time in your time zone</p>
+
+          <div className="h-[85%] w-screen flex justify-evenly items-start flex-wrap py-4 px-4 overflow-y-scroll container">
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">UTC(Coordinate Universal Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+            
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">CET(Central European Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">ET(Eastern Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">PT(Pacific Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">AEDT(Australian Eastern Daylight Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py- mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">JST(Japan Standard Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul>
+           </div>
+
+           <div className="h-auto w-2/3 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border">
+           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">IST(Indian Standard Time)</p>
+             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
+               {[
+                ['FP 1','0'],['FP 2','0'],['FP 3','0'],['qualifying','0'],['Race','0'],
+               ].map(([session,time])=>(
+                 <li className="text-slate-50 py-1">{session} : {time}</li>
+               ))}
+             </ul> 
+           </div>
+
+          </div>
     </section>
     <Footer/>
     </>

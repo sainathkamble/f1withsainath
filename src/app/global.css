@@ -5,3 +5,7 @@
 *{
     box-sizing: border-box;
 }
+
+.container::-webkit-scrollbar{
+    visibility:hidden;
+}
