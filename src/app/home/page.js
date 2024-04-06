@@ -58,30 +58,29 @@ export default function Hero(){
         <>
         <section className="h-[80vh] w-screen bg-slate-950 text-slate-50 flex justify-evenly items-center flex-wrap">
 
-         <div className="h-[10vh] w-screen bg-slate-950 flex justify-center items-center text-4xl font-bold text-slate-50 py-4">
+         <div className="h-auto w-screen bg-slate-950 flex justify-center items-center text-2xl font-bold text-slate-50">
             <span ref={el} />
           </div>
 
           <div className="w-screen flex justify-center">
-          <div className="h-auto w-2/3 px-4 py-2 rounded-xl grid place-items-center border sm:2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
-             <p className=" text-lg my-3">{currentRace} GP 2024 5-7 Apr</p>
+          <div className="h-auto w-2/3 px-4 py-1.5 rounded-xl grid place-items-center border sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
+             <p className=" text-lg my-3">{currentRace} GP 2024 5-7 April</p>
 
-              <div className="h-auto w-auto text-slate-50 text-lg my-2">
-                Free Practice 1 :- 8:00AM
+              <div className="h-auto w-auto text-slate-50 text-lg">
+                <p className="flex justify-center">5 April</p>
+                <p>Free Practice 1 :- 8:00AM</p>
+                <p>Free Practice 2 :- 11:30AM</p>
               </div>
-              <div className="h-auto w-auto text-slate-50 text-lg my-2">
-              Free Practice 2 :- 11:30AM
+              <div className="h-auto w-auto text-slate-50 text-lg">
+                <p className="flex justify-center">6 April</p> 
+                <p>Free Practice 3 :- 8:00AM</p>
+                <p>Qualifying :- 11:30AM</p>
               </div>
-              <div className="h-auto w-auto text-slate-50 text-lg my-2">
-                Free Practice 3 :- 8:00AM
+              <div className="h-auto w-auto text-slate-50 text-lg">
+                <p className="flex justify-center">7 April</p>
+                <p>Race :- 10:30AM</p>
               </div>
-              <div className="h-auto w-auto text-slate-50 text-lg my-2">
-                Qualifying :- 11:30AM
-              </div>
-              <div className="h-auto w-auto text-slate-50 text-lg my-2">
-                Race :- 10:30AM
-              </div>
-             <Link href="./livestream" className=" my-3 py-2 px-2.5 bg-red-600 rounded-xl text-xl font-semibold">{currentRace} Grand Prix</Link>
+             <Link href="./livestream" className=" my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentRace} Grand Prix</Link>
           </div>
           </div>
 
