@@ -7,8 +7,8 @@ export default function Calender(){
     return(
         <>
         <Navbar/>
-        <div className="h-[80vh] w-screen px-4 grid place-items-center bg-cover text-slate-50 overflow-x-hidden overflow-y-hidden bg-slate-950">
-         <Image src="/calendar.jpg" width={400} height={900} className="bg-cover" alt="F1 2024 Calendar image"/>
+        <div className="h-[80vh] w-screen px-4 grid place-items-center bg-cover text-slate-50 bg-slate-950">
+         <Image src="/calendar.jpg" width="400" height="900" className="bg-cover" alt="F1 2024 Calendar image"/>
         </div>
         <Footer/>
         </>

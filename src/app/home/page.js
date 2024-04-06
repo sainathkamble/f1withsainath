@@ -6,53 +6,40 @@ import Typed from "typed.js";
 
 export default function Hero(){
 
-    let currentRace = "Japanese"; 
-
    //typed js
        const el = useRef(null);
-      
         useEffect(() => {
           const typed = new Typed(el.current, {
             strings: ['<i>Watch<i> F1 live for free!','Watch F1 live for free!','Watch F1 live for free!','Watch F1 live for free!','Watch F1 live for free!'],
             typeSpeed: 100,
           });
-      
           return () => {
-            // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
           };
         }, []);
 
-     //Race time countdown
+     //Get race date  logic automatic
+     //Once race is over then just need to add dates of new race and GP name
+     let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix"
 
-      const useCountdown = () => {
-        const countDownDate = new Date("Apr 05, 2024 08:00:00").getTime();
-      
-        const [countDown, setCountDown] = useState(
-          countDownDate - new Date().getTime()
-        );
-      
-        useEffect(() => {
-          const interval = setInterval(() => {
-            setCountDown(countDownDate - new Date().getTime());
-          }, 1000);
-      
-          return () => clearInterval(interval);
-        }, [countDownDate]);
-      
-        return getReturnValues(countDown);
-      };
-      
-      const getReturnValues = (countDown) => {
-        // calculate time left
-        const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-      
-        return [days, hours, minutes, seconds];
-      };
-      
+     const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+     const date = new Date();
+     let currentMonth = monthNames[date.getMonth()];
+
+     let currentDate = new Date().getDate();
+  
+     let dayBeforeGp = new Date("April 4, 2024").getDate();
+     let gpDayOne = new Date("April 5, 2024").getDate();
+     let gpDayTwo = new Date("April 6, 2024").getDate();
+     let gpDayThree = new Date("April 7, 2024").getDate();
+
+     if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree || currentDate == dayBeforeGp){
+      currentGp = "Japanese"; gpHeader = gpHeader; gpButton = gpButton; 
+      gpDayOne = gpDayOne; gpDayTwo = gpDayTwo; gpDayThree = gpDayThree; currentMonth = currentMonth; 
+     }else{
+      currentGp = "No GP scheduled for now"; gpHeader = ""; gpButton = "";
+      gpDayOne = "--"; gpDayTwo = "--"; gpDayThree = "--"; currentMonth = "--"; 
+     }
 
     return(
         <>
@@ -63,24 +50,24 @@ export default function Hero(){
           </div>
 
           <div className="w-screen flex justify-center">
-          <div className="h-auto w-2/3 px-4 py-1.5 rounded-xl grid place-items-center border sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
-             <p className=" text-lg my-3">{currentRace} GP 2024 5-7 April</p>
+          <div className="h-auto w-3/4 px-4 py-1.5 rounded-xl grid place-items-center border sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
+             <p className=" text-lg my-3">{currentGp} {gpHeader} {gpDayOne} to {gpDayThree} {currentMonth}</p>
 
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">5 April</p>
+                <p className="flex justify-center">{gpDayOne} {currentMonth}</p>
                 <p>Free Practice 1 :- 8:00AM</p>
                 <p>Free Practice 2 :- 11:30AM</p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">6 April</p> 
+                <p className="flex justify-center">{gpDayTwo} {currentMonth}</p> 
                 <p>Free Practice 3 :- 8:00AM</p>
                 <p>Qualifying :- 11:30AM</p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">7 April</p>
+                <p className="flex justify-center">{gpDayThree} {currentMonth}</p>
                 <p>Race :- 10:30AM</p>
               </div>
-             <Link href="./livestream" className=" my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentRace} Grand Prix</Link>
+             <Link href="./livestream" className="my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentGp} {gpButton}</Link>
           </div>
           </div>
 
