@@ -28,13 +28,13 @@ export default function Hero(){
 
      let currentDate = new Date().getDate();
   
-     let dayBeforeGp = new Date("April 4, 2024").getDate();
-     let gpDayOne = new Date("April 5, 2024").getDate();
-     let gpDayTwo = new Date("April 6, 2024").getDate();
-     let gpDayThree = new Date("April 7, 2024").getDate();
+     let dayBeforeGp = new Date("April 18, 2024").getDate();
+     let gpDayOne = new Date("April 19, 2024").getDate();
+     let gpDayTwo = new Date("April 20, 2024").getDate();
+     let gpDayThree = new Date("April 21, 2024").getDate();
 
      if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree || currentDate == dayBeforeGp){
-      currentGp = "Japanese"; gpHeader = gpHeader; gpButton = gpButton; 
+      currentGp = "Chinese"; gpHeader = gpHeader; gpButton = gpButton; 
       gpDayOne = gpDayOne; gpDayTwo = gpDayTwo; gpDayThree = gpDayThree; currentMonth = currentMonth; 
      }else{
       currentGp = "No GP scheduled for now"; gpHeader = ""; gpButton = "";
