@@ -9,3 +9,7 @@
 .container::-webkit-scrollbar{
     visibility:hidden;
 }
+
+.nav-item:hover .nav-underline{
+    visibility: visible;
+}

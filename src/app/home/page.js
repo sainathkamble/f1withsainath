@@ -1,7 +1,7 @@
 'use client'
 import "../global.css";
 import Link from "next/link";
-import {React , useRef,useEffect } from "react";
+import {React , useState , useRef , useEffect } from "react";
 import Typed from "typed.js";
 
 export default function Hero(){
@@ -19,52 +19,63 @@ export default function Hero(){
         }, []);
 
      //Get race date  logic automatic
-     //Once race is over then just need to add dates of new race and GP name
-     let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix"
+     //Once race is over then just need to add dates of new race and GP name 
+
+     let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
+     let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
+     let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
+
+     gpDayOne == new Date("April 19, 2024").getDate() || gpDayOne == new Date("April 20, 2024").getDate() || gpDayOne == new Date("April 21, 2024").getDate() ?
+      setGpDayOne = new Date("April 19, 2024").getDate() : setGpDayOne = "--";
+     
+
+     gpDayTwo == new Date("April 19, 2024").getDate() || gpDayTwo == new Date("April 20, 2024").getDate() || gpDayTwo == new Date("April 21, 2024").getDate() ?
+      setGpDayTwo = new Date("April 20, 2024").getDate() : setGpDayTwo = "--";
+
+     gpDayThree == new Date("April 19, 2024").getDate() || gpDayThree == new Date("April 20, 2024").getDate() || gpDayThree == new Date("April 21, 2024").getDate() ?
+      setGpDayThree = new Date("April 21, 2024").getDate() : setGpDayThree = "--";
+     
+
+
+
+     let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
 
      const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
      const date = new Date();
      let currentMonth = monthNames[date.getMonth()];
 
      let currentDate = new Date().getDate();
-  
-     let dayBeforeGp = new Date("April 18, 2024").getDate();
-     let gpDayOne = new Date("April 19, 2024").getDate();
-     let gpDayTwo = new Date("April 20, 2024").getDate();
-     let gpDayThree = new Date("April 21, 2024").getDate();
-
-     if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree || currentDate == dayBeforeGp){
-      currentGp = "Chinese"; gpHeader = gpHeader; gpButton = gpButton; 
-      gpDayOne = gpDayOne; gpDayTwo = gpDayTwo; gpDayThree = gpDayThree; currentMonth = currentMonth; 
+     if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree){
+      currentGp = "Chinese"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
-      currentGp = "No GP scheduled for now"; gpHeader = ""; gpButton = "";
-      gpDayOne = "--"; gpDayTwo = "--"; gpDayThree = "--"; currentMonth = "--"; 
+      currentGp = "No GP scheduled for now";
+      gpHeader = ""; gpButton = "";
      }
 
     return(
         <>
-        <section className="h-[80vh] w-screen bg-slate-950 text-slate-50 flex justify-evenly items-center flex-wrap">
+        <section className="h-[82vh] w-screen bg-slate-950 text-slate-50 flex justify-evenly items-center flex-wrap">
 
-         <div className="h-auto w-screen bg-slate-950 flex justify-center items-center text-2xl font-bold text-slate-50">
+         <div className="h-auto w-screen bg-slate-950 flex justify-center items-center text-2xl font-bold text-slate-50 hover:text-red-600">
             <span ref={el} />
           </div>
 
           <div className="w-screen flex justify-center">
           <div className="h-auto w-3/4 px-4 py-1.5 rounded-xl grid place-items-center border sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
-             <p className=" text-lg my-3">{currentGp} {gpHeader} {gpDayOne} to {gpDayThree} {currentMonth}</p>
+             <p className=" text-lg my-3">{currentGp} {gpHeader} {setGpDayOne} to {setGpDayThree} {currentMonth}</p>
 
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">{gpDayOne} {currentMonth}</p>
+                <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
                 <p>Free Practice 1 :- 9:00AM</p>
                 <p>Sprint Qualifying :- 1:00PM</p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">{gpDayTwo} {currentMonth}</p> 
+                <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
                 <p>Sprint Race :- 8:30AM</p>
                 <p>Qualifying :- 12:30PM</p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
-                <p className="flex justify-center">{gpDayThree} {currentMonth}</p>
+                <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
                 <p>Race :- 12:30PM</p>
               </div>
              <Link href="./livestream" className="my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentGp} {gpButton}</Link>

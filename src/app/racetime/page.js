@@ -9,7 +9,7 @@ export default function Time(){
   return(
     <>
     <Navbar/>
-    <section className="h-[80vh] w-screen bg-slate-950">
+    <section className="h-[82vh] w-screen bg-slate-950">
 
           <p className="h-auto w-screen text-xl text-slate-50 flex justify-center py-4 px-4">{currentRace} time in your time zone</p>
 
