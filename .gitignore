@@ -5,6 +5,15 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.vs code
+.github
+.jsconfig.json
+.next.config.mjs
+.package-lock.json
+.package.json
+.postcss.config.json
+.tailwind.config.json
+
 
 # testing
 /coverage
