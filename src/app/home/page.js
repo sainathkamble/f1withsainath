@@ -25,15 +25,15 @@ export default function Hero(){
      let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-     gpDayOne == new Date("April 19, 2024").getDate() || gpDayOne == new Date("April 20, 2024").getDate() || gpDayOne == new Date("April 21, 2024").getDate() ?
-      setGpDayOne = new Date("April 19, 2024").getDate() : setGpDayOne = "--";
+     gpDayOne == new Date("May 02, 2024").getDate() || gpDayOne == new Date("May 03, 2024").getDate() || gpDayOne == new Date("May 04, 2024").getDate() || gpDayOne == new Date("May 05, 2024").getDate() ?
+      setGpDayOne = new Date("May 03, 2024").getDate() : setGpDayOne = "--";
      
 
-     gpDayTwo == new Date("April 19, 2024").getDate() || gpDayTwo == new Date("April 20, 2024").getDate() || gpDayTwo == new Date("April 21, 2024").getDate() ?
-      setGpDayTwo = new Date("April 20, 2024").getDate() : setGpDayTwo = "--";
+     gpDayTwo == new Date("May 02, 2024").getDate() || gpDayTwo == new Date("May 03, 2024").getDate() || gpDayTwo == new Date("May 04, 2024").getDate() || gpDayTwo == new Date("May 05, 2024").getDate() ?
+      setGpDayTwo = new Date("May 04, 2024").getDate() : setGpDayTwo = "--";
 
-     gpDayThree == new Date("April 19, 2024").getDate() || gpDayThree == new Date("April 20, 2024").getDate() || gpDayThree == new Date("April 21, 2024").getDate() ?
-      setGpDayThree = new Date("April 21, 2024").getDate() : setGpDayThree = "--";
+     gpDayThree == new Date("May 02, 2024").getDate() || gpDayThree == new Date("May 03, 2024").getDate() || gpDayThree == new Date("May 04, 2024").getDate() || gpDayThree == new Date("May 05, 2024").getDate() ?
+      setGpDayThree = new Date("May 05, 2024").getDate() : setGpDayThree = "--";
      
 
 
@@ -46,7 +46,7 @@ export default function Hero(){
 
      let currentDate = new Date().getDate();
      if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree){
-      currentGp = "Chinese"; gpHeader = gpHeader; gpButton = gpButton;
+      currentGp = "Miami"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
       gpHeader = ""; gpButton = "";
@@ -66,17 +66,17 @@ export default function Hero(){
 
               <div className="h-auto w-auto text-slate-50 text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- 9:00AM</p>
-                <p>Sprint Qualifying :- 1:00PM</p>
+                <p>Free Practice 1 :- </p>
+                <p>Sprint Qualifying :- </p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
                 <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- 8:30AM</p>
-                <p>Qualifying :- 12:30PM</p>
+                <p>Sprint Race :- </p>
+                <p>Qualifying :- </p>
               </div>
               <div className="h-auto w-auto text-slate-50 text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>Race :- 12:30PM</p>
+                <p>Race :- </p>
               </div>
              <Link href="./livestream" className="my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentGp} {gpButton}</Link>
           </div>
