@@ -43,9 +43,9 @@ export default function Hero(){
      const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
      const date = new Date();
      let currentMonth = monthNames[date.getMonth()];
-
+   
      let currentDate = new Date().getDate();
-     if(currentDate == gpDayOne || currentDate == gpDayTwo || currentDate == gpDayThree){
+     if(currentDate == setGpDayOne || currentDate == setGpDayTwo || currentDate == setGpDayThree){
       currentGp = "Miami"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
