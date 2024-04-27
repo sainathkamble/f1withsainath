@@ -1,8 +1,7 @@
 'use client'
 import "../global.css";
 import Link from "next/link";
-import {React , useState , useRef , useEffect } from "react";
-import Typed from "typed.js";
+import {React , useState} from "react";
 
 export default function Hero(){
 
@@ -12,8 +11,7 @@ export default function Hero(){
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
      gpDayOne == new Date("May 02, 2024").getDate() || gpDayOne == new Date("May 03, 2024").getDate() || gpDayOne == new Date("May 04, 2024").getDate() || gpDayOne == new Date("May 05, 2024").getDate() ?
-      setGpDayOne = new Date("May 03, 2024").getDate() : setGpDayOne = "--";
-     
+      setGpDayOne = new Date("May 03, 2024").getDate() : setGpDayOne = "--"; 
 
      gpDayTwo == new Date("May 02, 2024").getDate() || gpDayTwo == new Date("May 03, 2024").getDate() || gpDayTwo == new Date("May 04, 2024").getDate() || gpDayTwo == new Date("May 05, 2024").getDate() ?
       setGpDayTwo = new Date("May 04, 2024").getDate() : setGpDayTwo = "--";
@@ -45,17 +43,17 @@ return(
 
               <div className="h-auto w-auto text-white hover:text-black text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- 9:00AM</p>
-                <p>Sprint Qualifying :- 1:00PM</p>
+                <p>Free Practice 1 :- </p>
+                <p>Sprint Qualifying :- </p>
               </div>
               <div className="h-auto w-auto text-white hover:text-black text-lg">
                 <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- 8:30AM</p>
-                <p>Qualifying :- 12:30PM</p>
+                <p>Sprint Race :- </p>
+                <p>Qualifying :- </p>
               </div>
               <div className="h-auto w-auto text-white hover:text-black text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>Race :- 12:30PM</p>
+                <p>Race :- </p>
               </div>
              <Link href="./livestream" className="my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentGp} {gpButton}</Link>
           </div>
