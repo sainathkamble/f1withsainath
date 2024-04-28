@@ -15,7 +15,7 @@
 }
 
 .bg-image{
-    background-image: url(../../public/herobg.jpeg);
+    background-image: url(../../public/herobg.jpg);
     background-size: cover;
     background-position: center;
     filter: grayscale();
