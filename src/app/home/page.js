@@ -1,6 +1,7 @@
 'use client'
 import "../global.css";
 import Link from "next/link";
+import Navbar from "../navbar/page";
 import {React , useState} from "react";
 
 export default function Hero(){
@@ -35,11 +36,12 @@ export default function Hero(){
 
 return(
         <>
-        <section className="bg-image h-[82vh] w-screen bg-slate-950 text-slate-50 flex justify-evenly items-center flex-wrap">
+        <section className="bg-image h-[90vh] w-screen grid grid-cols-1">
+          <Navbar/>
+          <div className="h-[80vh] w-screen flex justify-center content-evenly">
 
-          <div className="w-screen flex justify-center content-evenly z-10">
-          <div className="h-auto w-screen px-4 py-1.5 grid place-items-center font-semibold sm:w-2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4 2xl:py-2">
-             <p className="text-white hover:text-black text-xl my-3">{currentGp} {gpHeader} {setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+           <div className="h-auto w-screen px-4 py-2 grid place-items-center font-semibold">
+             <p className="text-white hover:text-black text-2xl my-3">{currentGp} {gpHeader} {setGpDayOne} to {setGpDayThree} {currentMonth}</p>
 
               <div className="h-auto w-auto text-white hover:text-black text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
@@ -55,17 +57,11 @@ return(
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
                 <p>Race :- </p>
               </div>
-             <Link href="./livestream" className="my-3 py-2 px-3 bg-red-600 rounded-xl text-lg font-semibold">{currentGp} {gpButton}</Link>
-          </div>
-          </div>
-
-          <div className="w-screen flex justify-center z-10">
-             <Link href="./calendar" 
-             className="h-auto w-2/3 grid place-items-center rounded-xl py-2 text-2xl font-bold bg-transparent hover:bg-red-600 text-white
-             sm:2/3 md:w-2/4 lg:w-2/5 xl:w-1/3 2xl:w-1/4">
-              F1 Calender 2024
-             </Link>
-          </div>
+              <Link href="./livestream" className="px-2 py-2 rounded-xl text-lg font-bold text-white bg-red-600">
+                {currentGp} {gpButton}
+              </Link>
+           </div>
+         </div>
       </section>
     </>
     );
