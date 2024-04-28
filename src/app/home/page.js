@@ -40,8 +40,11 @@ return(
           <Navbar/>
           <div className="h-[80vh] w-screen flex justify-center content-evenly">
 
-           <div className="h-auto w-screen px-4 py-2 grid place-items-center font-semibold">
-             <p className="text-white hover:text-black text-2xl my-3">{currentGp} {gpHeader} {setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+           <div className="h-auto w-screen py-2 font-semibold grid place-items-center">
+             <div className="text-white hover:text-black text-2xl grid place-items-center">
+               {currentGp} {gpHeader} 
+               <p className="text-white hover:text-black text-2xl">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+             </div>
 
               <div className="h-auto w-auto text-white hover:text-black text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
