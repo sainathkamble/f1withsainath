@@ -1,5 +1,4 @@
 import "./global.css";
-import Navbar from "./navbar/page";
 import Footer from "./footer/page";
 import Hero from "./home/page";
 
