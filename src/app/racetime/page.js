@@ -1,98 +1,79 @@
+'use client'
 import "../global.css";
 import Navbar from "../navbar/page";
 import Footer from "../footer/page";
+import { useState } from "react";
 
 export default function Time(){
-     
-  let currentRace = "Japanese Grand Prix"; 
+   
+  let currentGp = "Miami";
+ 
+  let [time,setTime] = useState({FP1: 0, SpQuali: 0, SpRace: 0, Quali: 0, Race: 0,});
 
+  let [selectedTz,setSelectedTz] = useState("Local Time" || "UTC(Universal Time Coordinated)" || "CET(Central European Time)" || "ET(Eastern Time)" ||
+  "PT(Pacific Time)" || "AEDT(Australian Eastern Daylight Time)" || "JST(Japan Standard Time)" || "IST(Indian Standard Time)");
+ 
+  if(selectedTz == "Local Time"){
+  setTime.FP1 = "12:30 PM", setTime.SpQuali = "4:30 PM", setTime.SpRace = "12:00 PM", setTime.Quali = "4:00 PM", setTime.Race = "4:00 PM";
+  }else if(selectedTz == "UTC(Universal Time Coordinated)"){
+    setTime.FP1 = "5:30 PM", setTime.SpQuali = "7:30 PM", setTime.SpRace = "5:00 PM", setTime.Quali = "9:00 PM", setTime.Race = "9:00 PM";
+  }else if(selectedTz == "CET(Central European Time)"){
+    setTime.FP1 = "6:30 PM", setTime.SpQuali = "8:30 PM", setTime.SpRace = "6:00 PM", setTime.Quali = "10:00 PM", setTime.Race = "10:00 PM";
+  }else if(selectedTz == "ET(Eastern Time)"){
+    setTime.FP1 = "12:00 AM", setTime.SpQuali = "2:00 AM", setTime.SpRace = "12:00 AM", setTime.Quali = "4:00 AM", setTime.Race = "4:00 AM";
+  }else if(selectedTz == "PT(Pacific Time)"){
+    setTime.FP1 = "9:30 AM", setTime.SpQuali = "1:30 PM", setTime.SpRace = "9:00 AM", setTime.Quali = "1:00 PM", setTime.Race = "1:00 PM";
+  }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){
+    setTime.FP1 = "3:30 AM", setTime.SpQuali = "7:00 AM", setTime.SpRace = "3:00 AM", setTime.Quali = "7:00 AM", setTime.Race = "7:00 AM";
+  }else if(selectedTz == "JST(Japan Standard Time)"){
+    setTime.FP1 = "3:30 AM", setTime.SpQuali = "5:30 AM", setTime.SpRace = "3:00 AM", setTime.Quali = "7:00 AM", setTime.Race = "7:00 AM";
+  }else if(selectedTz == "IST(Indian Standard Time)"){
+    setTime.FP1 = "10:00 PM", setTime.SpQuali = "2:00 AM", setTime.SpRace = "9:30 PM", setTime.Quali = "1:30 AM", setTime.Race = "1:30 AM";
+  }else{
+    setTime.FP1 = "", setTime.SpQuali = "", setTime.SpRace = "", setTime.Quai = "", setTime.Race = "";
+  }
+   
   return(
     <>
+   <section className="bg-image h-[90vh] w-screen bg-slate-950">
     <Navbar/>
-    <section className="h-[82vh] w-screen bg-slate-950">
+        <div className="h-[80vh] w-screen grid">
 
-          <p className="h-auto w-screen text-xl text-slate-50 flex justify-center py-4 px-4">{currentRace} time in your time zone</p>
+         <p className="h-[10vh] w-screen text-xl font-semibold text-slate-50 flex justify-center items-center p-4">
+          Check {currentGp} Grand Prix time in your time zone
+         </p>
+          
 
-          <div className="h-[85%] w-screen flex justify-evenly items-start flex-wrap py-4 px-[10%] overflow-y-scroll snap-mandatory container">
+          <div className="h-[15vh] w-screen flex justify-evenly items-center flex-wrap">
 
-           <div className="h-auto w-3/4 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">UTC(Coordinate Universal Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','2:30AM'],['Free Practice 2','6:00AM'],['Free Practice 3','2:30AM'],['Qualifying','6:00AM'],['Race','5:00AM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-            
-           <div className="h-auto w-4/5 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">CET(Central European Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','4:30AM'],['Free Practice 2','8:00AM'],['Free Practice 3','4:30AM'],['Qualifying','8:00AM'],['Race','7:00AM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-
-           <div className="h-auto w-4/5 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">ET(Eastern Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','10:30PM'],['Free Practice 2','2:00AM'],['Free Practice 3','10:30PM'],['Qualifying','2:00AM'],['Race','1:00AM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-
-           <div className="h-auto w-4/5 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">PT(Pacific Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','7:30PM'],['Free Practice 2','11:00PM'],['Free Practice 3','7:30PM'],['Qualifying','11:00PM'],['Race','10:PM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-
-           <div className="h-auto w-4/5 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">AEDT(Australian Eastern Daylight Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','1:30PM'],['Free Practice 2','5:00PM'],['Free Practice 3','1:30PM'],['Qualifying','5:00PM'],['Race','3:00PM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-
-           <div className="h-auto w-4/5 rounded-lg px-2 py- mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">JST(Japan Standard Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','11:30AM'],['Free Practice 2','3:00PM'],['Free Practice 3','11:30AM'],['Qualifying','3:00PM'],['Race','2:00PM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul>
-           </div>
-
-           <div className="h-auto w-4/5 rounded-lg px-2 py-2 mx-1 my-2 sm:w-1/2 sm:my-4 md:w-1/3 lg:w-1/2 xl:w-1/4 2xl:w-1/4 border snap-center">
-           <p className="text-slate-50 text-lg font-medium flex justify-center py-2">IST(Indian Standard Time)</p>
-             <ul className="grid grid-cols-1 grid-rows-5 gap-1">
-               {[
-                ['Free Practice 1','8:00AM'],['Free Practice 2','11:30AM'],['Free Practice 3','8:00AM'],['Qualifying','11:30AM'],['Race','10:30AM'],
-               ].map(([session,time])=>(
-                 <li className="text-slate-50 py-1">{session} : {time}</li>
-               ))}
-             </ul> 
-           </div>
-
+           <select className="h-[10vh] w-4/5 bg-transparent border text-white flex justify-center items-center
+            sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/5 2xl:w-2/5" 
+            value={selectedTz} onChange={e => setSelectedTz(e.target.value)}>
+            {[
+              ["Select your time zone"],
+              ["Local Time"],
+              ["UTC(Universal Time Coordinated)"],
+              ["CET(Central European Time)"],
+              ["ET(Eastern Time)"],
+              ["PT(Pacific Time)"],
+              ["AEDT(Australian Eastern Daylight Time)"],
+              ["JST(Japan Standard Time)"],
+              ["IST(Indian Standard Time)"],
+            ].map(([Timezone])=>(
+              <option value={Timezone} className="h-auto w-auto  bg-slate-950 text-white">{Timezone}</option>
+            ))}
+           </select>
           </div>
+
+          <div className="h-[55vh] w-screen grid grid-cols-1 grid-rows-5 place-items-center">
+            <p className="text-lg font-semibols text-white">Free Practice 1 :- {setTime.FP1}</p>
+            <p className="text-lg font-semibols text-white">Sprint Qualifying :- {setTime.SpQuali}</p>
+            <p className="text-lg font-semibols text-white">Sprint Race :- {setTime.SpRace}</p>
+            <p className="text-lg font-semibols text-white">Qualifying :- {setTime.Quali}</p>
+            <p className="text-lg font-semibols text-white">Race :- {setTime.Race}</p>
+          </div>
+
+         </div>
     </section>
     <Footer/>
     </>

@@ -41,24 +41,25 @@ return(
           <div className="h-[80vh] w-screen flex justify-center content-evenly">
 
            <div className="h-auto w-screen py-2 font-semibold grid place-items-center">
-             <div className="text-white hover:text-black text-2xl grid place-items-center">
+            
+             <div className="text-white text-2xl grid place-items-center">
                {currentGp} {gpHeader} 
-               <p className="text-white hover:text-black text-2xl">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+               <p className="text-white text-2xl">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
              </div>
 
-              <div className="h-auto w-auto text-white hover:text-black text-lg">
+              <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- </p>
-                <p>Sprint Qualifying :- </p>
+                <p>Free Practice 1 :- 10:00 PM</p>
+                <p>Sprint Qualifying :- 2:00 AM</p>
               </div>
-              <div className="h-auto w-auto text-white hover:text-black text-lg">
+              <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- </p>
-                <p>Qualifying :- </p>
+                <p>Sprint Race :- 9:30 PM</p>
+                <p>Qualifying :- 1:30 PM</p>
               </div>
-              <div className="h-auto w-auto text-white hover:text-black text-lg">
+              <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>Race :- </p>
+                <p>Race :- 1:30 PM</p>
               </div>
               <Link href="./livestream" className="px-2 py-2 rounded-xl text-lg font-bold text-white bg-red-600">
                 {currentGp} {gpButton}
