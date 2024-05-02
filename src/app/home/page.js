@@ -18,7 +18,7 @@ export default function Hero(){
       setGpDayTwo = new Date("May 04, 2024").getDate() : setGpDayTwo = "--";
 
      gpDayThree == new Date("May 02, 2024").getDate() || gpDayThree == new Date("May 03, 2024").getDate() || gpDayThree == new Date("May 04, 2024").getDate() || gpDayThree == new Date("May 05, 2024").getDate() ?
-      setGpDayThree = new Date("May 05, 2024").getDate() : setGpDayThree = "--";
+      setGpDayThree = new Date("May 06, 2024").getDate() : setGpDayThree = "--";
 
      let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
 
@@ -27,7 +27,8 @@ export default function Hero(){
      let currentMonth = monthNames[date.getMonth()];
    
      let currentDate = new Date().getDate();
-     if(currentDate == setGpDayOne || currentDate == setGpDayTwo || currentDate == setGpDayThree){
+
+     if(currentDate == new Date("May 02, 2024").getDate() || currentDate == new Date("May 03, 2024").getDate() || currentDate == new Date("May 04, 2024").getDate() || currentDate == new Date("May 05, 2024").getDate() || currentDate == new Date("May 06, 2024").getDate()){
       currentGp = "Miami"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
@@ -48,20 +49,20 @@ return(
              </div>
 
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- 10:00 PM</p>
-                <p>Sprint Qualifying :- 2:00 AM</p>
+                <p className="flex justify-center">{setGpDayOne} - 4 {currentMonth}</p>
+                <p>3 May :- Free Practice 1 :- 10:00 PM </p>
+                <p>4 May :- Sprint Qualifying :- 2:00 AM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- 9:30 PM</p>
-                <p>Qualifying :- 1:30 PM</p>
+                <p className="flex justify-center">{setGpDayTwo} - 5 {currentMonth}</p> 
+                <p>4 May :- Sprint Race :- 9:30 PM</p>
+                <p>5 May :- Qualifying :- 1:30 AM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>Race :- 1:30 PM</p>
+                <p>6 May :- Race :- 1:30 AM</p>
               </div>
-              <Link href="./livestream" className="px-2 py-2 rounded-xl text-lg font-bold text-white bg-red-600">
+              <Link href="./livestream" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
