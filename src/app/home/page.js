@@ -43,24 +43,24 @@ return(
 
            <div className="h-auto w-screen py-2 font-semibold grid place-items-center">
             
-             <div className="text-white text-2xl grid place-items-center">
+             <div className="text-white font-md text-xl grid place-items-center">
                {currentGp} {gpHeader} 
-               <p className="text-white text-2xl">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+               <p className="text-white font-semibold text-xl">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
              </div>
 
-              <div className="h-auto w-auto text-white text-lg">
+              <div className="h-auto w-auto font-semibold text-white text-lg">
                 <p className="flex justify-center">{setGpDayOne} - 4 {currentMonth}</p>
-                <p>3 May :- Free Practice 1 :- 10:00 PM </p>
-                <p>4 May :- Sprint Qualifying :- 2:00 AM</p>
+                <p>3 May : Free Practice 1 :- 10:00 PM </p>
+                <p>4 May : Sprint Qualifying :- 2:00 AM</p>
               </div>
-              <div className="h-auto w-auto text-white text-lg">
+              <div className="h-auto w-auto font-semibold text-white text-lg">
                 <p className="flex justify-center">{setGpDayTwo} - 5 {currentMonth}</p> 
-                <p>4 May :- Sprint Race :- 9:30 PM</p>
-                <p>5 May :- Qualifying :- 1:30 AM</p>
+                <p>4 May : Sprint Race :- 9:30 PM</p>
+                <p>5 May : Qualifying :- 1:30 AM</p>
               </div>
-              <div className="h-auto w-auto text-white text-lg">
+              <div className="h-auto w-auto font-semibold text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>6 May :- Race :- 1:30 AM</p>
+                <p>6 May : Race :- 1:30 AM</p>
               </div>
               <Link href="./livestream" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
