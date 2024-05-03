@@ -7,8 +7,8 @@ export default function Home() {
       <>
       <section className="bg-image h-[90vh] w-screen bg-transparent">
       <Navbar/>
-      <iframe src="https://latifistreams.com/channel/raw?url=aHR0cHM6Ly9saXZlLWN0di52aWRlby45YzltZWRpYS5jb20vZi9UU04vVFNONS9tYW5pZmVzdC5tcGQ=&amp;k1=Y2I1Nzc0MWExY2VlNDIyNjkwYzYyOTRhMDZlYjEzMjA=&amp;k2=N2EwY2ZkNDkzZGY2ZWY3Y2MwZDBiYjNhZDk1Y2VjOGM=" 
-      allow="autoplay; encrypted-media" height="90%" width="100%" scrolling="no" allowfullscreen=""></iframe>
+      <iframe src="https://latifistreams.com/channel/raw2?url=aHR0cHM6Ly9pbnN0MS5pZ25vcmVzLnRvcC9qcy9mMS1xdWFsaWZ5aW5nLWYxLW1haW4tcmFjZS8xL3BsYXlsaXN0Lm0zdTg=" 
+      allow="autoplay encrypted-media" height="90%" width="100%" scrolling="no" allowfullscreen=""></iframe>
       </section>
       <Footer/>
       </>
