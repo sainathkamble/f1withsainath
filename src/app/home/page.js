@@ -61,7 +61,7 @@ return(
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
                 <p>6 May : Race :- 1:30 AM</p>
               </div>
-              <Link href="./livestream" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./miamigp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
