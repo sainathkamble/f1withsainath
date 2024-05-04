@@ -18,10 +18,5 @@
     background-image: url(../../public/herobg.webp);
     background-size: cover;
     background-position: center;
-    filter: grayscale();
-    transition: filter 0.5s ease-in-out;
     z-index: -1;
-}
-.bg-image:hover{
-    filter: none;
 }
