@@ -7,7 +7,7 @@ export default function Home() {
       <>
       <section className="bg-image h-[90vh] w-screen bg-transparent">
       <Navbar/>
-      <iframe id="iframe" src="https://latifistreams.com/channel/raw2?url=aHR0cHM6Ly9pbnN0MS5pZ25vcmVzLnRvcC9qcy9mMS1xdWFsaWZ5aW5nLWYxLW1haW4tcmFjZS8xL3BsYXlsaXN0Lm0zdTg=" 
+      <iframe id="iframe" src="https://wikisport.se/strm/30.php" 
       allow="autoplay; encrypted-media" height="94%" width="100%" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
       </section>
       <Footer/>
