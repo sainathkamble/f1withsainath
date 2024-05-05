@@ -11,13 +11,13 @@ export default function Hero(){
      let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-     gpDayOne == new Date("May 02, 2024").getDate() || gpDayOne == new Date("May 03, 2024").getDate() || gpDayOne == new Date("May 04, 2024").getDate() || gpDayOne == new Date("May 05, 2024").getDate() ?
+     gpDayOne == new Date("May 02, 2024").getDate() || gpDayOne == new Date("May 03, 2024").getDate() || gpDayOne == new Date("May 04, 2024").getDate() || gpDayOne == new Date("May 05, 2024").getDate() || gpDayOne == new Date("May 06, 2024").getDate() ?
       setGpDayOne = new Date("May 03, 2024").getDate() : setGpDayOne = "--"; 
 
-     gpDayTwo == new Date("May 02, 2024").getDate() || gpDayTwo == new Date("May 03, 2024").getDate() || gpDayTwo == new Date("May 04, 2024").getDate() || gpDayTwo == new Date("May 05, 2024").getDate() ?
+     gpDayTwo == new Date("May 02, 2024").getDate() || gpDayTwo == new Date("May 03, 2024").getDate() || gpDayTwo == new Date("May 04, 2024").getDate() || gpDayTwo == new Date("May 05, 2024").getDate() || gpDayTwo == new Date("May 06, 2024").getDate() ?
       setGpDayTwo = new Date("May 04, 2024").getDate() : setGpDayTwo = "--";
 
-     gpDayThree == new Date("May 02, 2024").getDate() || gpDayThree == new Date("May 03, 2024").getDate() || gpDayThree == new Date("May 04, 2024").getDate() || gpDayThree == new Date("May 05, 2024").getDate() ?
+     gpDayThree == new Date("May 02, 2024").getDate() || gpDayThree == new Date("May 03, 2024").getDate() || gpDayThree == new Date("May 04, 2024").getDate() || gpDayThree == new Date("May 05, 2024").getDate() || gpDayThree == new Date("May 06, 2024").getDate() ?
       setGpDayThree = new Date("May 06, 2024").getDate() : setGpDayThree = "--";
 
      let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
