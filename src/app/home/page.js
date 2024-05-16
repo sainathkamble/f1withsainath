@@ -16,13 +16,13 @@ export default function Hero(){
      let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-     gpDayOne == dayBeforeGp || gpDayOne == firstGpDate || gpDayOne == secondGpDate || gpDayOne == finalGpDate ?
+     gpDayOne == dayBeforeGp || gpDayOne == firstGpDate || gpDayOne == secondGpDate || finalGpDate ?
       setGpDayOne = new Date("May 17, 2024").getDate() : setGpDayOne = "--"; 
 
-     gpDayTwo == dayBeforeGp || gpDayTwo == firstGpDate || gpDayOne == secondGpDate || gpDayTwo == finalGpDate ?
+     gpDayTwo == dayBeforeGp || gpDayTwo ==  firstGpDate || gpDayTwo == secondGpDate || gpDayTwo == finalGpDate ?
       setGpDayTwo = new Date("May 18, 2024").getDate() : setGpDayTwo = "--";
 
-     gpDayThree == dayBeforeGp || gpDayThree == firstGpDate || gpDayOne == secondGpDate || gpDayThree == finalGpDate ?
+     gpDayThree == dayBeforeGp || gpDayThree ==  firstGpDate || gpDayThree == secondGpDate || gpDayThree == finalGpDate ?
       setGpDayThree = new Date("May 19, 2024").getDate() : setGpDayThree = "--";
 
      let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
