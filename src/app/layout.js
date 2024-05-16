@@ -4,8 +4,8 @@ import  "./global.css"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Watch F1 live",
-  description: "This a app for watching F1 live!",
+  title: "F1 with Sainath",
+  description: "This a web app to watch F1 live!",
 };
 
 export default function RootLayout({ children }) {
