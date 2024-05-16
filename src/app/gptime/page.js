@@ -8,31 +8,31 @@ export default function Time(){
    
   let currentGp = "Miami";
  
-  let [time,setTime] = useState({FP1: 0, SpQuali: 0, SpRace: 0, Quali: 0, Race: 0,});
+  let [time,setTime] = useState({FP1: 0, FP2: 0, FP3: 0, Quali: 0, Race: 0,});
 
   let [selectedTz,setSelectedTz] = useState("Local Time" || "UTC(Universal Time Coordinated)" || "CET(Central European Time)" || "ET(Eastern Time)" ||
   "PT(Pacific Time)" || "AEDT(Australian Eastern Daylight Time)" || "JST(Japan Standard Time)" || "IST(Indian Standard Time)");
  
   if(selectedTz == "Local Time"){
-  setTime.FP1 = "12:30 PM", setTime.SpQuali = "4:30 PM", setTime.SpRace = "12:00 PM", setTime.Quali = "4:00 PM", setTime.Race = "4:00 PM";
+  setTime.FP1 = "1:30 PM", setTime.FP2 = "5:00 PM", setTime.FP3 = "12:30 PM", setTime.Quali = "4:00 PM", setTime.Race = "3:00 PM";
   }else if(selectedTz == "UTC(Universal Time Coordinated)"){
-    setTime.FP1 = "5:30 PM", setTime.SpQuali = "7:30 PM", setTime.SpRace = "5:00 PM", setTime.Quali = "9:00 PM", setTime.Race = "9:00 PM";
+    setTime.FP1 = "11:30 AM", setTime.FP2 = "3:00 PM", setTime.FP3 = "10:30 AM", setTime.Quali = "2:00 PM", setTime.Race = "1:00 PM";
   }else if(selectedTz == "PT(Pacific Time)"){
-    setTime.FP1 = "9:30 AM", setTime.SpQuali = "1:30 PM", setTime.SpRace = "9:00 AM", setTime.Quali = "1:00 PM", setTime.Race = "1:00 PM";
+    setTime.FP1 = "4:30 AM", setTime.FP2 = "8:00 AM", setTime.FP3 = "3:30 AM", setTime.Quali = "7:00 AM", setTime.Race = "6:00 AM";
   } else if(selectedTz == "BST(British Standard Time)"){
-    setTime.FP1 = "5:30 AM", setTime.SpQuali = "9:30 PM", setTime.SpRace = "5:00 AM", setTime.Quali = "9:00 PM", setTime.Race = "9:00 PM";
+    setTime.FP1 = "12:30 PM", setTime.FP2 = "4:00 PM", setTime.FP3 = "11:30 AM", setTime.Quali = "3:00 PM", setTime.Race = "2:00 PM";
   } else if(selectedTz == "CET(Central European Time)"){
-    setTime.FP1 = "6:30 PM", setTime.SpQuali = "8:30 PM", setTime.SpRace = "6:00 PM", setTime.Quali = "10:00 PM", setTime.Race = "10:00 PM";
+    setTime.FP1 = "1:30 PM", setTime.FP2 = "5:00 PM", setTime.FP3 = "12:30 PM", setTime.Quali = "4:00 PM", setTime.Race = "3:00 PM";
   }else if(selectedTz == "ET(Eastern Time)"){
-    setTime.FP1 = "12:30 PM", setTime.SpQuali = "4:30 PM", setTime.SpRace = "12:00 PM", setTime.Quali = "4:00 PM", setTime.Race = "4:00 PM";
+    setTime.FP1 = "7:30 AM", setTime.FP2 = "11:00 AM", setTime.FP3= "6:30 AM", setTime.Quali = "10:00 AM", setTime.Race = "9:00 AM";
   }else if(selectedTz == "IST(Indian Standard Time)"){
-    setTime.FP1 = "10:00 PM", setTime.SpQuali = "2:00 AM", setTime.SpRace = "9:30 PM", setTime.Quali = "1:30 AM", setTime.Race = "1:30 AM";
+    setTime.FP1 = "5:00 PM", setTime.FP2 = "8:30 PM", setTime.FP3 = "4:00 PM", setTime.Quali = "7:30 PM", setTime.Race = "6:30 PM";
   }else if(selectedTz == "JST(Japan Standard Time)"){
-    setTime.FP1 = "1:30 AM", setTime.SpQuali = "5:30 AM", setTime.SpRace = "1:00 AM", setTime.Quali = "5:00 AM", setTime.Race = "5:00 AM";
+    setTime.FP1 = "8:30 PM", setTime.FP2 = "12:00 AM", setTime.FP3 = "7:30 PM", setTime.Quali = "11:00 PM", setTime.Race = "10:00 PM";
   }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){
-    setTime.FP1 = "2:30 AM", setTime.SpQuali = "6:30 AM", setTime.SpRace = "2:00 AM", setTime.Quali = "6:00 AM", setTime.Race = "6:00 AM";
+    setTime.FP1 = "9:30 PM", setTime.FP2 = "1:00 AM", setTime.FP3 = "8:30 PM", setTime.Quali = "12:00 AM", setTime.Race = "11:00 AM";
   }else{
-    setTime.FP1 = "", setTime.SpQuali = "", setTime.SpRace = "", setTime.Quai = "", setTime.Race = "";
+    setTime.FP1 = "", setTime.FP2 = "", setTime.FP3 = "", setTime.Quali = "", setTime.Race = "";
   }
    
   return(
@@ -70,8 +70,8 @@ export default function Time(){
 
           <div className="h-[55vh] w-screen grid grid-cols-1 grid-rows-5 place-items-center">
             <p className="text-lg font-semibols text-white">Free Practice 1 :- {setTime.FP1}</p>
-            <p className="text-lg font-semibols text-white">Sprint Qualifying :- {setTime.SpQuali}</p>
-            <p className="text-lg font-semibols text-white">Sprint Race :- {setTime.SpRace}</p>
+            <p className="text-lg font-semibols text-white">Free Practice 2 :- {setTime.FP2}</p>
+            <p className="text-lg font-semibols text-white">Free Practice 3 :- {setTime.FP3}</p>
             <p className="text-lg font-semibols text-white">Qualifying :- {setTime.Quali}</p>
             <p className="text-lg font-semibols text-white">Race :- {setTime.Race}</p>
           </div>

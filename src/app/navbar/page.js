@@ -18,7 +18,7 @@ export default function Navbar(){
             <div className="nav-underline h-1 w-full bg-red-600 invisible"></div>
           </Link>
 
-          <Link href="./racetime" className="nav-item h-full w-1/3 text-lg font-semibold sm:text-sm sm:font-medium md:text-md lg:text-lg xl:text-2xl 2xl:text-2xl
+          <Link href="./gptime" className="nav-item h-full w-1/3 text-lg font-semibold sm:text-sm sm:font-medium md:text-md lg:text-lg xl:text-2xl 2xl:text-2xl
           grid grid-cols-1 grid-rows-1 place-items-center text-white hover:text-red-600">
            <p>GP time</p>
            <div className="nav-underline h-1 w-full bg-red-600 invisible"></div>

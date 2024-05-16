@@ -5,20 +5,25 @@ import Navbar from "../navbar/page";
 import {React , useState} from "react";
 
 export default function Hero(){
-
+    
+    let dayBeforeGp = new Date("May 16, 2024").getDate();
+    let firstGpDate = new Date("May 17, 2024").getDate();
+    let secondGpDate = new Date("May 18, 2024").getDate();
+    let finalGpDate = new Date("May 19, 2024").getDate();
+    
      //Get race date  logic automatic
      let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
      let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-     gpDayOne == new Date("May 02, 2024").getDate() || gpDayOne == new Date("May 03, 2024").getDate() || gpDayOne == new Date("May 04, 2024").getDate() || gpDayOne == new Date("May 05, 2024").getDate() ?
-      setGpDayOne = new Date("May 03, 2024").getDate() : setGpDayOne = "--"; 
+     gpDayOne == dayBeforeGp || gpDayOne == firstGpDate || gpDayOne == secondGpDate || gpDayOne == finalGpDate ?
+      setGpDayOne = new Date("May 17, 2024").getDate() : setGpDayOne = "--"; 
 
-     gpDayTwo == new Date("May 02, 2024").getDate() || gpDayTwo == new Date("May 03, 2024").getDate() || gpDayTwo == new Date("May 04, 2024").getDate() || gpDayTwo == new Date("May 05, 2024").getDate() ?
-      setGpDayTwo = new Date("May 04, 2024").getDate() : setGpDayTwo = "--";
+     gpDayTwo == dayBeforeGp || gpDayTwo == firstGpDate || gpDayOne == secondGpDate || gpDayTwo == finalGpDate ?
+      setGpDayTwo = new Date("May 18, 2024").getDate() : setGpDayTwo = "--";
 
-     gpDayThree == new Date("May 02, 2024").getDate() || gpDayThree == new Date("May 03, 2024").getDate() || gpDayThree == new Date("May 04, 2024").getDate() || gpDayThree == new Date("May 05, 2024").getDate() ?
-      setGpDayThree = new Date("May 06, 2024").getDate() : setGpDayThree = "--";
+     gpDayThree == dayBeforeGp || gpDayThree == firstGpDate || gpDayOne == secondGpDate || gpDayThree == finalGpDate ?
+      setGpDayThree = new Date("May 19, 2024").getDate() : setGpDayThree = "--";
 
      let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
 
@@ -28,8 +33,8 @@ export default function Hero(){
    
      let currentDate = new Date().getDate();
 
-     if(currentDate == new Date("May 02, 2024").getDate() || currentDate == new Date("May 03, 2024").getDate() || currentDate == new Date("May 04, 2024").getDate() || currentDate == new Date("May 05, 2024").getDate() || currentDate == new Date("May 06, 2024").getDate()){
-      currentGp = "Miami"; gpHeader = gpHeader; gpButton = gpButton;
+     if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
+      currentGp = "Imola"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
       gpHeader = ""; gpButton = "";
@@ -48,20 +53,20 @@ return(
              </div>
 
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayOne} - 4 {currentMonth}</p>
-                <p>3 May : Free Practice 1 :- 10:00 PM</p>
-                <p>4 May : Sprint Qualifying :- 2:00 AM</p>
+                <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
+                <p>Free Practice 1 :-  5:00 PM</p>
+                <p>Free Practice 2 :- 8:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayTwo} - 5 {currentMonth}</p> 
-                <p>4 May : Sprint Race :- 9:30 PM</p>
-                <p>5 May : Qualifying :- 1:30 AM</p>
+                <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
+                <p>Free Practice 3 :- 4:00 PM</p>
+                <p>Qualifying :- 7:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>6 May : Race :- 1:30 AM</p>
+                <p>Race :- 6:30 PM</p>
               </div>
-              <Link href="./miamigp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./imolagp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
