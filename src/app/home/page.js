@@ -6,10 +6,10 @@ import {React , useState} from "react";
 
 export default function Hero(){
     
-    let dayBeforeGp = new Date("May 16, 2024").getDate();
-    let firstGpDate = new Date("May 17, 2024").getDate();
-    let secondGpDate = new Date("May 18, 2024").getDate();
-    let finalGpDate = new Date("May 19, 2024").getDate();
+    let dayBeforeGp = new Date("May 23, 2024").getDate();
+    let firstGpDate = new Date("May 24, 2024").getDate();
+    let secondGpDate = new Date("May 25, 2024").getDate();
+    let finalGpDate = new Date("May 26, 2024").getDate();
     
      //Get race date  logic automatic
      let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
@@ -17,13 +17,13 @@ export default function Hero(){
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
      gpDayOne == dayBeforeGp || gpDayOne == firstGpDate || gpDayOne == secondGpDate || finalGpDate ?
-      setGpDayOne = new Date("May 17, 2024").getDate() : setGpDayOne = "--"; 
+      setGpDayOne = new Date("May 24, 2024").getDate() : setGpDayOne = "--"; 
 
      gpDayTwo == dayBeforeGp || gpDayTwo ==  firstGpDate || gpDayTwo == secondGpDate || gpDayTwo == finalGpDate ?
-      setGpDayTwo = new Date("May 18, 2024").getDate() : setGpDayTwo = "--";
+      setGpDayTwo = new Date("May 25, 2024").getDate() : setGpDayTwo = "--";
 
      gpDayThree == dayBeforeGp || gpDayThree ==  firstGpDate || gpDayThree == secondGpDate || gpDayThree == finalGpDate ?
-      setGpDayThree = new Date("May 19, 2024").getDate() : setGpDayThree = "--";
+      setGpDayThree = new Date("May 26, 2024").getDate() : setGpDayThree = "--";
 
      let currentGp = ""; let gpHeader = "GP 2024"; let gpButton = "Grand Prix";
 
@@ -34,7 +34,7 @@ export default function Hero(){
      let currentDate = new Date().getDate();
 
      if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
-      currentGp = "Imola"; gpHeader = gpHeader; gpButton = gpButton;
+      currentGp = "Monaco"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
       gpHeader = ""; gpButton = "";
@@ -66,7 +66,7 @@ return(
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
                 <p>Race :- 6:30 PM</p>
               </div>
-              <Link href="./imolagp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./monacogp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
