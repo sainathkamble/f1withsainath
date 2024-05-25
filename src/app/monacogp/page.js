@@ -8,7 +8,7 @@ export default function Home() {
       <section className="bg-image h-[90vh] w-screen bg-transparent">
       <Navbar/>
       <iframe id="iframe" src="https://streambtw.com/iframe/f1.php" 
-      allow="autoplay; encrypted-media" height="94%" width="100%" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+      allow="autoplay; encrypted-media" height="90%" width="100%" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
       </section>
       <Footer/>
       </>
