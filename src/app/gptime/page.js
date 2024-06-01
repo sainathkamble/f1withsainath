@@ -26,7 +26,7 @@ export default function Time(){
   }else if(selectedTz == "ET(Eastern Time)"){
     setTime.FP1 = "7:30 AM", setTime.FP2 = "11:00 AM", setTime.FP3= "6:30 AM", setTime.Quali = "10:00 AM", setTime.Race = "9:00 AM";
   }else if(selectedTz == "IST(Indian Standard Time)"){
-    setTime.FP1 = "5:00 PM", setTime.FP2 = "8:30 PM", setTime.FP3 = "4:00 PM", setTime.Quali = "7:30 PM", setTime.Race = "6:30 PM";
+    setTime.FP1 = "9:00 PM", setTime.FP2 = "2:30 AM", setTime.FP3 = "11:00 PM", setTime.Quali = "1:30 PM", setTime.Race = "11:30 PM";
   }else if(selectedTz == "JST(Japan Standard Time)"){
     setTime.FP1 = "8:30 PM", setTime.FP2 = "12:00 AM", setTime.FP3 = "7:30 PM", setTime.Quali = "11:00 PM", setTime.Race = "10:00 PM";
   }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){
