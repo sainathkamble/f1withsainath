@@ -5,8 +5,8 @@ import Navbar from "../navbar/page";
 import {React , useState} from "react";
 
 export default function Hero(){
-    
-    let dayBeforeGp = new Date("June 06, 2024").getDate();
+
+  let dayBeforeGp = new Date("June 06, 2024").getDate();
     let firstGpDate = new Date("June 07, 2024").getDate();
     let secondGpDate = new Date("June 08, 2024").getDate();
     let finalGpDate = new Date("June 09, 2024").getDate();
@@ -34,7 +34,7 @@ export default function Hero(){
      let currentDate = new Date().getDate();
 
      if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
-      currentGp = "Monaco"; gpHeader = gpHeader; gpButton = gpButton;
+      currentGp = "Canada"; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
       gpHeader = ""; gpButton = "";
@@ -53,13 +53,13 @@ return(
              </div>
 
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayOne} to 8 {currentMonth}</p>
-                <p>7 June : Free Practice 1 :-  9:00 PM</p>
+                <p className="flex justify-center">{setGpDayOne} - 8 {currentMonth}</p>
+                <p>7 June : Free Practice 1 :-  11:00 PM</p>
                 <p>8 June : Free Practice 2 :- 2:30 AM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayTwo} to 9 {currentMonth}</p> 
-                <p>8 June : Free Practice 3 :- 11:00 PM</p>
+                <p className="flex justify-center">{setGpDayTwo} - 9 {currentMonth}</p> 
+                <p>8 June : Free Practice 3 :- 10:00 PM</p>
                 <p>9 June : Qualifying :- 1:30 AM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
