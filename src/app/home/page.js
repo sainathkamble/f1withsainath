@@ -1,6 +1,7 @@
 'use client'
 import "../global.css";
 import Link from "next/link";
+import Footer from "../footer/page";
 import Navbar from "../navbar/page";
 import {React , useState} from "react";
 
@@ -42,8 +43,8 @@ export default function Hero(){
 
 return(
         <>
-        <section className="bg-image h-[90vh] w-screen grid grid-cols-1">
-          <Navbar/>
+        <section className="bg-image h-[100vh] w-screen grid grid-cols-1">
+         <Navbar/>
           <div className="h-[80vh] w-screen flex justify-center content-evenly">
 
            <div className="h-auto w-screen py-2 font-semibold grid place-items-center">
@@ -71,6 +72,7 @@ return(
               </Link>
            </div>
          </div>
+         <Footer/>
       </section>
     </>
     );

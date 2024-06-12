@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Time(){
    
-  let currentGp = "Miami";
+  let currentGp = "Spanish";
  
   let [time,setTime] = useState({FP1: 0, FP2: 0, FP3: 0, Quali: 0, Race: 0,});
 
@@ -37,7 +37,7 @@ export default function Time(){
    
   return(
     <>
-   <section className="bg-image h-[90vh] w-screen bg-slate-950">
+   <section className="bg-image h-[100vh] w-screen bg-slate-950">
     <Navbar/>
         <div className="h-[80vh] w-screen grid">
 
@@ -45,40 +45,42 @@ export default function Time(){
           Check {currentGp} Grand Prix time in your time zone
          </p>
           
-
           <div className="h-[15vh] w-screen flex justify-evenly items-center flex-wrap">
-
            <select className="h-[10vh] w-4/5 bg-transparent border text-white flex justify-center items-center
             sm:w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/5 2xl:w-2/5" 
             value={selectedTz} onChange={e => setSelectedTz(e.target.value)}>
             {[
-              ["Select your time zone"],
-              ["Local Time"],
-              ["BST(British Standard Time)"],
-              ["UTC(Universal Time Coordinated)"],
-              ["CET(Central European Time)"],
-              ["ET(Eastern Time)"],
-              ["PT(Pacific Time)"],
-              ["AEDT(Australian Eastern Daylight Time)"],
-              ["JST(Japan Standard Time)"],
-              ["IST(Indian Standard Time)"],
-            ].map(([Timezone])=>(
-              <option value={Timezone} className="h-auto w-auto  bg-slate-950 text-white">{Timezone}</option>
+              ["1","Select your time zone"],
+              ["2","Local Time"],
+              ["3","BST(British Standard Time)"],
+              ["4","UTC(Universal Time Coordinated)"],
+              ["5","CET(Central European Time)"],
+              ["6","ET(Eastern Time)"],
+              ["7","PT(Pacific Time)"],
+              ["8","AEDT(Australian Eastern Daylight Time)"],
+              ["9","JST(Japan Standard Time)"],
+              ["10","IST(Indian Standard Time)"],
+            ].map(([key,Timezone])=>(
+              <option key={key} value={Timezone} className="h-auto w-auto  bg-slate-950 text-white">{Timezone}</option>
             ))}
            </select>
           </div>
 
           <div className="h-[55vh] w-screen grid grid-cols-1 grid-rows-5 place-items-center">
-            <p className="text-lg font-semibols text-white">Free Practice 1 :- {setTime.FP1}</p>
-            <p className="text-lg font-semibols text-white">Free Practice 2 :- {setTime.FP2}</p>
-            <p className="text-lg font-semibols text-white">Free Practice 3 :- {setTime.FP3}</p>
-            <p className="text-lg font-semibols text-white">Qualifying :- {setTime.Quali}</p>
-            <p className="text-lg font-semibols text-white">Race :- {setTime.Race}</p>
+            {[
+                ["1","Free Practice 1",setTime.FP1],
+                ["2","Free Practice 2",setTime.FP2],
+                ["3","Free Practice 3",setTime.FP3],
+                ["4","Qualifying",setTime.Quali],
+                ["5","Race",setTime.Race],
+              ].map(([key,session,time]) =>(
+                <p key={key} className="text-lg font-semibols text-white">{session} :- {time}</p>
+              ))}
           </div>
 
-         </div>
+        </div>
+      <Footer/>
     </section>
-    <Footer/>
     </>
   );
 }

@@ -5,11 +5,11 @@ import { faGithub , faInstagram , faXTwitter } from "@fortawesome/free-brands-sv
 
 export default function Footer(){
     return(
-        <section className="h-[10vh] w-screen bg-black flex justify-between place-items-center px-4 py-2">
+        <section className="h-[10vh] w-screen bg-transparent flex justify-between place-items-center px-4 py-2">
 
-           <p className="h-auto w-3/4 text-slate-50 font-normal hover:text-red-600 sm:w-3/5 md:w-3/5 lg:w-3/5 xl:w-4/5 2xl:w-4/5 sm:text-md md:text-md lg:text-lg xl:text-lg 2xl:text-lg">
+           <span className="h-auto w-3/4 text-slate-50 font-normal hover:text-red-600 sm:w-3/5 md:w-3/5 lg:w-3/5 xl:w-4/5 2xl:w-4/5 sm:text-md md:text-md lg:text-lg xl:text-lg 2xl:text-lg">
             Created and maintained by Sainath Kamble
-           </p>
+           </span>
           
            <div className="h-auto w-1/4 flex justify-evenly items-cente sm:w-2/5 md:2/5 lg:w-2/5 xl:w-1/5 2xl:w-1/5">
            <Link href="https://github.com/sainathkamble">
