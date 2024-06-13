@@ -68,7 +68,7 @@ return(
                 <p>Warm Up :- 3:30 PM</p>
                 <p>Race :- 7:30 PM</p>
               </div>
-              <Link href="./spanishgp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./lemans2024" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
