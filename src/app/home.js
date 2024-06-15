@@ -1,11 +1,11 @@
 'use client'
-import "../global.css";
+import "./global.css";
 import Link from "next/link";
-import Footer from "../footer/page";
-import Navbar from "../navbar/page";
+import Navbar from "./navbar";
+import Footer from "./footer";
 import {React , useState} from "react";
 
-export default function Hero(){
+export default function Hero(props){
 
   let dayBeforeGp = new Date("June 13, 2024").getDate();
   let firstGpDate = new Date("June 14, 2024").getDate();
@@ -26,7 +26,7 @@ export default function Hero(){
      gpDayThree == dayBeforeGp || gpDayThree ==  firstGpDate || gpDayThree == secondGpDate || gpDayThree == finalGpDate ?
      setGpDayThree = new Date("June 15, 2024").getDate() : setGpDayThree = "--";
      
-     let currentGp = ""; let gpHeader = "2024"; let gpButton = "2024";
+     let currentGp = props.currentGp; let gpHeader = "2024"; let gpButton = "2024";
 
      const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
      const date = new Date();
@@ -35,7 +35,7 @@ export default function Hero(){
      let currentDate = new Date().getDate();
 
      if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
-      currentGp = "Le Mans"; gpHeader = gpHeader; gpButton = gpButton;
+      currentGp = currentGp; gpHeader = gpHeader; gpButton = gpButton;
      }else{
       currentGp = "No GP scheduled for now";
       gpHeader = ""; gpButton = "";

@@ -1,17 +1,18 @@
 import "../global.css";
-import Navbar from "../navbar/page";
-import Footer from "../footer/page";
+import Navbar from "../navbar.js";
+import Footer from "../footer.js";
 
 export default function Home() {
     return (
       <>
-      <section className="bg-image h-[100vh] w-screen bg-transparent">
+      <section className="bg-image h-[100vh] w-screen bg-traparent">
       <Navbar/>
-      <iframe id="iframe" src="https://voodc.com/embed/858a928f9b8c86978799838994879886.html"
-      allow="autoplay; encrypted-media" height="80%" width="100%" frameborder="0" Scrolling="no" allowfullscreen=""></iframe>
+      <iframe id="iframe" src="https://latifistreams.com/channel/iframe1"
+      allow="autoplay; encrypted-media" height="80%" width="100%" frameBorder="0" Scrolling="no" allowFullScreen=""></iframe>
       <Footer/>
       </section>
       </>
+
     );
   }
   

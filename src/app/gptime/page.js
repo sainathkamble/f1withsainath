@@ -1,7 +1,7 @@
 'use client'
 import "../global.css";
-import Navbar from "../navbar/page";
-import Footer from "../footer/page";
+import Navbar from "../navbar.js";
+import Footer from "../footer.js";
 import { useState } from "react";
 
 export default function Time(){

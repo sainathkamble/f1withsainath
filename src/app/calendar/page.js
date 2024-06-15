@@ -1,6 +1,6 @@
 import "../global.css";
-import Navbar from "../navbar/page";
-import Footer from "../footer/page";
+import Navbar from "../navbar.js";
+import Footer from "../footer.js";
 import Image from "next/image";
 
 export default function Calender(){

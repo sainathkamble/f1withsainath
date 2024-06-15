@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
-.vs code
+.vscode
 .github
 .jsconfig.json
 .next.config.mjs
