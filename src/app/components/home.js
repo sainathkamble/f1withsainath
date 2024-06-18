@@ -13,9 +13,9 @@ export default function Hero(props){
   let finalGpDate = new Date("June 23, 2024").getDate();
     
      //Get race date  logic automatic
-     let [gpDayOne , setGpDayOne] = useState(new Date("June 20, 2024").getDate());
-     let [gpDayTwo , setGpDayTwo] = useState(new Date("June 20, 2024").getDate());
-     let [gpDayThree , setGpDayThree] = useState(new Date("June 20, 2024").getDate());
+     let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
+     let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
+     let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
      gpDayOne == dayBeforeGp || gpDayOne ==  firstGpDate || gpDayOne == secondGpDate || gpDayOne == finalGpDate ?
      setGpDayOne = new Date("June 21, 2024").getDate() : setGpDayOne = "--";
@@ -35,7 +35,7 @@ export default function Hero(props){
      let currentGp = props.currentGp; 
      let gpHeader = "GP 2024"; 
      let gpButton = "2024";
-     let currentDate = new Date("June 20, 2024").getDate();
+     let currentDate = new Date().getDate();
 
      if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
       currentGp = currentGp; gpHeader = gpHeader; gpButton = gpButton;
