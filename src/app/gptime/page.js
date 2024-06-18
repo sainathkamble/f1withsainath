@@ -1,7 +1,7 @@
 'use client'
 import "../global.css";
-import Navbar from "../navbar.js";
-import Footer from "../footer.js";
+import Navbar from "../components/navbar.js";
+import Footer from "../components/footer.js";
 import { useState } from "react";
 
 export default function Time(){
@@ -26,7 +26,7 @@ export default function Time(){
   }else if(selectedTz == "ET(Eastern Time)"){
     setTime.FP1 = "1:30 PM", setTime.FP2 = "5:00 PM", setTime.FP3= "12:30 PM", setTime.Quali = "4:00 PM", setTime.Race = "2:00 PM";
   }else if(selectedTz == "IST(Indian Standard Time)"){
-    setTime.FP1 = "11:00 PM", setTime.FP2 = "2:30 AM", setTime.FP3 = "10:00 PM", setTime.Quali = "1:30 PM", setTime.Race = "11:30 PM";
+    setTime.FP1 = "5:00 PM", setTime.FP2 = "8:30 PM", setTime.FP3 = "4:00 PM", setTime.Quali = "7:30 PM", setTime.Race = "6:30 PM";
   }else if(selectedTz == "JST(Japan Standard Time)"){
     setTime.FP1 = "2:30 AM", setTime.FP2 = "6:00 AM", setTime.FP3 = "1:30 AM", setTime.Quali = "5:00 AM", setTime.Race = "3:00 AM";
   }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){

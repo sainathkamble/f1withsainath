@@ -1,12 +1,12 @@
 import "./global.css";
-import Hero from "./home";
+import Hero from "./components/home";
 
 
 export default function Home() {
 
   return (
     <div className="h-screen w-screen overflow-x-hidden">
-      <Hero currentGp="Le Mans"/>
+      <Hero currentGp="Spanish"/>
     </div>
   );
 }

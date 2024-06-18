@@ -11,7 +11,7 @@
 }
 
 .bg-image{
-    background-image: url(../../public/lemans.jpg);
+    background-image: url(../../public/bg.jpg);
     background-size: cover;
     background-position: center;
     z-index: -1;

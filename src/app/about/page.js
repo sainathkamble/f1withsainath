@@ -1,7 +1,7 @@
 
 import "../global.css";
-import Navbar from "../navbar.js";
-import Footer from "../footer.js";
+import Navbar from "../components/navbar.js";
+import Footer from "../components/footer.js";
 
 export default function Aabout(){
     

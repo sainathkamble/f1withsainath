@@ -1,4 +1,4 @@
-import "./global.css";
+import "../global.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faGithub , faInstagram , faXTwitter } from "@fortawesome/free-brands-svg-icons";
