@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen overflow-x-hidden">
-      <Hero currentGp="Spanish"/>
+      <Hero currentGp="Austrian"/>
     </div>
   );
 }

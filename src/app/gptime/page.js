@@ -8,32 +8,33 @@ export default function Time(props){
    
   let currentGp = props.currentGp;
  
-  let [time,setTime] = useState({FP1: 13.5, FP2: 17, FP3: 12.5, Quali: 16, Race: 15});
+  let [time,setTime] = useState({FP1: "", FP2: "", FP3: "", Quali: "", Race: ""});
 
   let [selectedTz,setSelectedTz] = useState("Local Time" || "UTC(Universal Time Coordinated)" || "CET(Central European Time)" || "ET(Eastern Time)" ||
   "PT(Pacific Time)" || "AEDT(Australian Eastern Daylight Time)" || "JST(Japan Standard Time)" || "IST(Indian Standard Time)");
  
   if(selectedTz == "Local Time"){
-  setTime.FP1 = time.FP1, setTime.FP2 = time.FP2, setTime.FP3 = time.FP3, setTime.Quali = time.Quali,setTime.Race = time.Race;
+  setTime.FP1 = "12:30 PM", setTime.FP2 = "4:30 PM", setTime.FP3 = "12:00 PM", setTime.Quali = "4:00 PM", setTime.Race = "3:00 PM";
   }else if(selectedTz == "UTC(Universal Time Coordinated)"){
-    setTime.FP1 = time.FP1 + 4, setTime.FP2 = time.FP2 + 4, setTime.FP3 = time.FP3 + 4, setTime.Quali = time.Quali + 4, setTime.Race = time.Race + 4;
+    setTime.FP1 = "10:30 AM", setTime.FP2 = "2:30 PM", setTime.FP3 = "10:00 AM" + 4, setTime.Quali = "2:00 PM", setTime.Race = "1:00 PM";
   }else if(selectedTz == "PT(Pacific Time)"){
-    setTime.FP1 = time.FP1 - 3, setTime.FP2 = time.FP1 - 3, setTime.FP3 = time.FP3 - 3, setTime.Quali = time.Quali - 3, setTime.Race = time.Race - 3;
+    setTime.FP1 = "3:30 AM", setTime.FP2 = "7:30 AM", setTime.FP3 = "3:00 AM", setTime.Quali = "7:00 AM", setTime.Race = "6:00 AM";
   } else if(selectedTz == "BST(British Standard Time)"){
-    setTime.FP1 = time.FP1 + 5 , setTime.FP2 = time.FP2 + 5 , setTime.FP3 = time.FP3 + 5 , setTime.Quali = time.Quali + 5 , setTime.Race = time.Race + 5 ;
+    setTime.FP1 = "11:30 AM" , setTime.FP2 = "3:30 PM" , setTime.FP3 = "11:00 AM" , setTime.Quali = "3:00 PM" , setTime.Race = "2:00 PM";
   } else if(selectedTz == "CET(Central European Time)"){
-    setTime.FP1 = time.FP1 + 6 , setTime.FP2 = time.FP2 + 6 , setTime.FP3 = time.FP3 + 6 , setTime.Quali = time.Quali + 6 , setTime.Race = time.Race + 6 ;
+    setTime.FP1 = "12:30 PM" , setTime.FP2 = "4:30 PM" , setTime.FP3 = "12:00 PM" , setTime.Quali = "4:00 PM" , setTime.Race = "3:00 PM";
   }else if(selectedTz == "ET(Eastern Time)"){
-    setTime.FP1 = time.FP1 + 0, setTime.FP2 = time.FP2 + 0, setTime.FP3= time.FP3 + 0, setTime.Quali = time.Quali + 0, setTime.Race = time.Race + 0;
+    setTime.FP1 = "6:30 AM", setTime.FP2 = "10:30 AM", setTime.FP3= "6:00 AM", setTime.Quali = "10:00 AM", setTime.Race = "9:00 AM";
   }else if(selectedTz == "IST(Indian Standard Time)"){
-    setTime.FP1 = time.FP1 + 3.5, setTime.FP2 = time.FP2 + 3.5, setTime.FP3 = time.FP3 + 3.5, setTime.Quali = time.Quali + 3.5, setTime.Race = time.Race + 3.5;
+    setTime.FP1 = "4:00 PM", setTime.FP2 = "8:00 PM", setTime.FP3 = "3:30 PM", setTime.Quali = "7:30 PM", setTime.Race = "6:30 PM";
   }else if(selectedTz == "JST(Japan Standard Time)"){
-    setTime.FP1 = time.FP1 - 11, setTime.FP2 = time.FP2 - 11, setTime.FP3 = time.FP3 - 11, setTime.Quali = time.Quali - 11, setTime.Race = time.Race - 11;
+    setTime.FP1 = "7:30 PM", setTime.FP2 = "11:30 PM", setTime.FP3 = "7:00 PM", setTime.Quali = "11:00 PM", setTime.Race = "10:00 PM";
   }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){
-    setTime.FP1 = time.FP1 - 10, setTime.FP2 = time.FP2 - 10, setTime.FP3 = time.FP3 - 10, setTime.Quali = time.Quali - 10, setTime.Race = time.Race - 10;
+    setTime.FP1 = "8:30 PM", setTime.FP2 = "12:30 AM", setTime.FP3 = "8:00 PM", setTime.Quali = "12:00 AM", setTime.Race = "11:00 PM";
   }else{
     setTime.FP1 = "", setTime.FP2 = "", setTime.FP3 = "", setTime.Quali = "", setTime.Race = "";
   }
+
   return(
     <>
    <section className="bg-image h-[100vh] w-screen bg-slate-950">

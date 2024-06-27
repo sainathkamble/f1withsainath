@@ -7,10 +7,10 @@ import {React , useState} from "react";
 
 export default function Hero(props){
 
-  let dayBeforeGp = new Date("June 20, 2024").getDate();
-  let firstGpDate = new Date("June 21, 2024").getDate();
-  let secondGpDate = new Date("June 22, 2024").getDate();
-  let finalGpDate = new Date("June 23, 2024").getDate();
+  let dayBeforeGp = new Date("June 27, 2024").getDate();
+  let firstGpDate = new Date("June 28, 2024").getDate();
+  let secondGpDate = new Date("June 29, 2024").getDate();
+  let finalGpDate = new Date("June 30, 2024").getDate();
     
      //Get race date  logic automatic
      let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
@@ -18,13 +18,13 @@ export default function Hero(props){
      let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
      gpDayOne == dayBeforeGp || gpDayOne ==  firstGpDate || gpDayOne == secondGpDate || gpDayOne == finalGpDate ?
-     setGpDayOne = new Date("June 21, 2024").getDate() : setGpDayOne = "--";
+     setGpDayOne = new Date("June 28, 2024").getDate() : setGpDayOne = "--";
 
      gpDayTwo == dayBeforeGp || gpDayTwo ==  firstGpDate || gpDayTwo == secondGpDate || gpDayTwo == finalGpDate ?
-      setGpDayTwo = new Date("June 22, 2024").getDate() : setGpDayTwo = "--";
+      setGpDayTwo = new Date("June 29, 2024").getDate() : setGpDayTwo = "--";
 
      gpDayThree == dayBeforeGp || gpDayThree ==  firstGpDate || gpDayThree == secondGpDate || gpDayThree == finalGpDate ?
-     setGpDayThree = new Date("June 23, 2024").getDate() : setGpDayThree = "--";
+     setGpDayThree = new Date("June 30, 2024").getDate() : setGpDayThree = "--";
      
 
      const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
@@ -58,19 +58,19 @@ return(
 
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- 5:00 PM</p>
-                <p>Free Practice 2 :- 8:30 PM</p>
+                <p>Free Practice 1 :- 4:00 PM</p>
+                <p>Sprint Qualifying :- 8:00 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Free Practice 3 :- 4:00 PM</p>
+                <p>Sprint Race :- 3:30 PM</p>
                 <p>Qualifying :- 7:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
                 <p>Race :- 6:30 PM</p>
               </div>
-              <Link href="./spanishgp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./austriangp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {currentGp} {gpButton}
               </Link>
            </div>
