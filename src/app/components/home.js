@@ -34,8 +34,8 @@ export default function Hero(props){
    
 
      let currentGp = props.currentGp; 
-     let gpHeader = "GP 2024"; 
-     let gpButton = "2024";
+     let gpHeader = "Grand Prix 2024"; 
+     let gpButton = "GP 2024";
      let currentDate = new Date().getDate();
 
      if(currentDate == dayBeforeGp || currentDate == firstGpDate || gpDayOne == secondGpDate || currentDate == finalGpDate ){
