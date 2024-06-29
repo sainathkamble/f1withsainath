@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import {React , useState} from "react";
+import { GPs } from "../gps.js";
 
 export default function Hero(props){
 
