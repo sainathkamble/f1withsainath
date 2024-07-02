@@ -4,9 +4,7 @@ import Navbar from "../components/navbar.js";
 import Footer from "../components/footer.js";
 import { useState } from "react";
 
-export default function Time(props){
-   
-  let currentGp = props.currentGp;
+export default function Time(){
  
   let [time,setTime] = useState({FP1: "", FP2: "", FP3: "", Quali: "", Race: ""});
 
@@ -42,7 +40,7 @@ export default function Time(props){
         <div className="h-[80vh] w-screen grid">
 
          <p className="h-[10vh] w-screen text-xl font-semibold text-slate-50 flex justify-center items-center p-4">
-          Check {currentGp} Grand Prix time in your time zone
+          Check grand prix time in your time zone!
          </p>
           
           <div className="h-[15vh] w-screen flex justify-evenly items-center flex-wrap">

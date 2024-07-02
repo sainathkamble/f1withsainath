@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen overflow-x-hidden">
-      <Hero currentGp="Austrian"/>
+      <Hero currentGp="British Grand Prix 2024"/>
     </div>
   );
 }
