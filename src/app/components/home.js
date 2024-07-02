@@ -14,7 +14,7 @@ let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
 let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
 let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-let currentDate = new Date("October 30, 2024").getDate();
+let currentDate = new Date().getDate();
 
 const getGpDates = GPs.some( (gp)=>{
   if( currentDate == gp.dayBeforeGp ){
