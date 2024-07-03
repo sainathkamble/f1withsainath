@@ -47,17 +47,17 @@ return(
 
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
-                <p>Free Practice 1 :- </p>
-                <p>Sprint Qualifying :- </p>
+                <p>Free Practice 1 :- 5:00 PM</p>
+                <p>Sprint Qualifying :- 8:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- </p>
-                <p>Qualifying :- </p>
+                <p>Sprint Race :- 4:00 PM</p>
+                <p>Qualifying :- 7:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
-                <p>Race :- </p>
+                <p>Race :- 7:30 PM</p>
               </div>
               <Link href="./britishgp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
                 {gpButton}
