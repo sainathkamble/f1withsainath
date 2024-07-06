@@ -6,23 +6,25 @@ import Footer from "./footer";
 import {React , useState} from "react";
 import { GPs } from "../gps.js";
 
-export default function Hero(props){
+export default function Hero(){
 
-let currentGp = props.currentGp; let gpButton = currentGp;
+let currentGp = ""; 
+let gpButton = "";
 
 let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
 let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
 let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
+let currentMonth = new Date().getMonth();
 let currentDate = new Date().getDate();
 
 const getGpDates = GPs.some( (gp)=>{
-  if( currentDate == gp.dayBeforeGp ){
+  if( currentMonth && currentDate == gp.dayBeforeGp || currentMonth && currentDate == gp.firstGpDate || currentMonth && currentDate == gp.secondGpDate || currentMonth && currentDate == gp.lastGpDate){
     setGpDayOne = gp.firstGpDate; setGpDayTwo = gp.secondGpDate; setGpDayThree = gp.thirdGpDate;
+    currentGp = gp.currentGp; gpButton = gp.currentGp;
     return true;
   }else{
     setGpDayOne = "--"; setGpDayTwo = "--"; setGpDayThree = "--";
-    gpButton = "No Grand Prix";
     return false;
   }
  }
@@ -30,8 +32,8 @@ const getGpDates = GPs.some( (gp)=>{
 
 const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
 const date = new Date();
-let currentMonth = monthNames[date.getMonth()];
-   
+let currentMon = monthNames[date.getMonth()];
+
 return(
         <>
         <section className="bg-image h-[100vh] w-screen grid grid-cols-1">
@@ -43,24 +45,24 @@ return(
                { getGpDates ? <p>{currentGp}</p> : <p>No GP schedulded for now!</p> }
              </div>
 
-             <p className="text-white text-2xl grid place-items-center">{setGpDayOne} to {setGpDayThree} {currentMonth}</p>
+             <p className="text-white text-2xl grid place-items-center">{setGpDayOne} to {setGpDayThree} {currentMon}</p>
 
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayOne} {currentMonth}</p>
+                <p className="flex justify-center">{setGpDayOne} {currentMon}</p>
                 <p>Free Practice 1 :- 5:00 PM</p>
-                <p>Sprint Qualifying :- 8:30 PM</p>
+                <p>Free Practice 2 :- 8:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayTwo} {currentMonth}</p> 
-                <p>Sprint Race :- 4:00 PM</p>
+                <p className="flex justify-center">{setGpDayTwo} {currentMon}</p> 
+                <p>Free Practice 3 :- 4:00 PM</p>
                 <p>Qualifying :- 7:30 PM</p>
               </div>
               <div className="h-auto w-auto text-white text-lg">
-                <p className="flex justify-center">{setGpDayThree} {currentMonth}</p>
+                <p className="flex justify-center">{setGpDayThree} {currentMon}</p>
                 <p>Race :- 7:30 PM</p>
               </div>
               <Link href="./britishgp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
-                {gpButton}
+              { getGpDates ? <p>{gpButton}</p> : <p>No Grand Prix</p> }
               </Link>
            </div>
          </div>
