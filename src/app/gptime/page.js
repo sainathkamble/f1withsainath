@@ -12,23 +12,23 @@ export default function Time(){
   "PT(Pacific Time)" || "AEDT(Australian Eastern Daylight Time)" || "JST(Japan Standard Time)" || "IST(Indian Standard Time)");
  
   if(selectedTz == "Local Time"){
-  setTime.FP1 = "1:30 PM", setTime.FP2 = "5:00 PM", setTime.FP3 = "12:30 PM", setTime.Quali = "4:00 PM", setTime.Race = "3:00 PM";
+  setTime.FP1 = "12:30 PM", setTime.FP2 = "4:00 PM", setTime.FP3 = "11:30 AM", setTime.Quali = "3:00 PM", setTime.Race = "2:00 PM";
   }else if(selectedTz == "UTC(Universal Time Coordinated)"){
-    setTime.FP1 = "11:30 AM", setTime.FP2 = "3:00 PM", setTime.FP3 = "10:30 AM" + 4, setTime.Quali = "2:00 PM", setTime.Race = "2:00 PM";
+    setTime.FP1 = "11:30 AM", setTime.FP2 = "3:00 PM", setTime.FP3 = "10:30 AM" + 4, setTime.Quali = "2:00 PM", setTime.Race = "1:00 PM";
   }else if(selectedTz == "PT(Pacific Time)"){
-    setTime.FP1 = "4:30 AM", setTime.FP2 = "8:00 AM", setTime.FP3 = "3:30 AM", setTime.Quali = "7:00 AM", setTime.Race = "7:00 AM";
+    setTime.FP1 = "4:30 AM", setTime.FP2 = "8:00 AM", setTime.FP3 = "3:30 AM", setTime.Quali = "7:00 AM", setTime.Race = "6:00 AM";
   } else if(selectedTz == "BST(British Standard Time)"){
-    setTime.FP1 = "12:30 PM" , setTime.FP2 = "4:00 PM" , setTime.FP3 = "12:30 AM" , setTime.Quali = "4:00 PM" , setTime.Race = "3:00 PM";
+    setTime.FP1 = "12:30 PM" , setTime.FP2 = "4:00 PM" , setTime.FP3 = "11:30 AM" , setTime.Quali = "3:00 PM" , setTime.Race = "2:00 PM";
   } else if(selectedTz == "CET(Central European Time)"){
-    setTime.FP1 = "1:30 PM" , setTime.FP2 = "5:00 PM" , setTime.FP3 = "12:30 PM" , setTime.Quali = "4:00 PM" , setTime.Race = "4:00 PM";
+    setTime.FP1 = "1:30 PM" , setTime.FP2 = "5:00 PM" , setTime.FP3 = "12:30 PM" , setTime.Quali = "4:00 PM" , setTime.Race = "3:00 PM";
   }else if(selectedTz == "ET(Eastern Time)"){
-    setTime.FP1 = "7:00 AM", setTime.FP2 = "11:00 AM", setTime.FP3= "6:30 AM", setTime.Quali = "10:00 AM", setTime.Race = "10:00 AM";
+    setTime.FP1 = "7:30 AM", setTime.FP2 = "11:00 AM", setTime.FP3= "6:30 AM", setTime.Quali = "10:00 AM", setTime.Race = "9:00 AM";
   }else if(selectedTz == "IST(Indian Standard Time)"){
-    setTime.FP1 = "5:00 PM", setTime.FP2 = "8:30 PM", setTime.FP3 = "4:00 PM", setTime.Quali = "7:30 PM", setTime.Race = "7:30 PM";
+    setTime.FP1 = "5:00 PM", setTime.FP2 = "8:30 PM", setTime.FP3 = "4:00 PM", setTime.Quali = "7:30 PM", setTime.Race = "6:30 PM";
   }else if(selectedTz == "JST(Japan Standard Time)"){
-    setTime.FP1 = "8:30 PM", setTime.FP2 = "12:00 PM", setTime.FP3 = "7:30 PM", setTime.Quali = "11:00 PM", setTime.Race = "11:00 PM";
+    setTime.FP1 = "8:30 PM", setTime.FP2 = "12:00 PM", setTime.FP3 = "7:30 PM", setTime.Quali = "11:00 PM", setTime.Race = "10:00 PM";
   }else if(selectedTz == "AEDT(Australian Eastern Daylight Time)"){
-    setTime.FP1 = "9:30 PM", setTime.FP2 = "1:00 AM", setTime.FP3 = "8:30 PM", setTime.Quali = "12:00 AM", setTime.Race = "12:00 AM";
+    setTime.FP1 = "9:30 PM", setTime.FP2 = "1:00 AM", setTime.FP3 = "8:30 PM", setTime.Quali = "12:00 AM", setTime.Race = "11:00 PM";
   }else{
     setTime.FP1 = "", setTime.FP2 = "", setTime.FP3 = "", setTime.Quali = "", setTime.Race = "";
   }

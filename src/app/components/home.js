@@ -8,18 +8,15 @@ import { GPs } from "../gps.js";
 
 export default function Hero(){
 
-let currentGp = ""; 
-let gpButton = "";
-
 let [gpDayOne , setGpDayOne] = useState(new Date().getDate());
 let [gpDayTwo , setGpDayTwo] = useState(new Date().getDate());
 let [gpDayThree , setGpDayThree] = useState(new Date().getDate());
 
-let currentMonth = new Date().getMonth();
 let currentDate = new Date().getDate();
+let currentGp = ""; let gpButton = "";
 
 const getGpDates = GPs.some( (gp)=>{
-  if( currentMonth && currentDate == gp.dayBeforeGp || currentMonth && currentDate == gp.firstGpDate || currentMonth && currentDate == gp.secondGpDate || currentMonth && currentDate == gp.lastGpDate){
+  if( currentDate == gp.reference || currentDate == gp.reference+1 || currentDate == gp.reference+2 || currentDate == gp.reference+3){
     setGpDayOne = gp.firstGpDate; setGpDayTwo = gp.secondGpDate; setGpDayThree = gp.thirdGpDate;
     currentGp = gp.currentGp; gpButton = gp.currentGp;
     return true;
@@ -59,9 +56,9 @@ return(
               </div>
               <div className="h-auto w-auto text-white text-lg">
                 <p className="flex justify-center">{setGpDayThree} {currentMon}</p>
-                <p>Race :- 7:30 PM</p>
+                <p>Race :- 6:30 PM</p>
               </div>
-              <Link href="./britishgp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
+              <Link href="./hungariangp" className="px-4 py-2 rounded-xl text-lg font-semibold text-white bg-red-600">
               { getGpDates ? <p>{gpButton}</p> : <p>No Grand Prix</p> }
               </Link>
            </div>
