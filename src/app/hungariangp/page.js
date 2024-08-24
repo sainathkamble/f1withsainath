@@ -7,7 +7,7 @@ export default function Home() {
       <>
       <section className="bg-image h-[100vh] w-screen bg-traparent">
       <Navbar/>
-      <iframe id="iframe" src="https://mazespin.live/channel/raw2?id=ESPN2_H"
+      <iframe id="iframe" src="https://mazespin.live/channel/raw?id=TSN5CA"
       allow="autoplay; encrypted-media" height="80%" width="100%" frameBorder="0" Scrolling="no" allowFullScreen="true"></iframe>
       <Footer/>
       </section>
